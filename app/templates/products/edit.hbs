@@ -1,0 +1,13 @@
+<div class="jumbotron">
+	<div class="input-group">
+		<span class="input-group-addon">Product Name</span>
+		{{input type="text" class="form-control" value=name size="50" placeholder="Product Name"}}
+	</div>
+	<br/>
+	<div class="input-group">
+		<span class="input-group-addon">Description</span>
+		{{input type="text" class="form-control" value=description size="50" placeholder="Product Description"}}
+	</div>
+	<br/>
+		<button {{action "save"}} class="btn btn-default" title="save">Save</button>
+</div>

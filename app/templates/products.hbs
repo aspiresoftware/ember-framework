@@ -1,0 +1,35 @@
+<ul class="nav nav-pills pull-right">
+            <li class="active">{{#link-to 'products.save'}}Add Product{{/link-to}}</li>
+</ul>
+<div class="jumbotron">
+	<div class="table-responsive">
+		<table class="table">
+			<tr class="text-center pull-center">
+				<th>Id</th>
+				<th>Name</th>
+				<th>Description</th>
+				<th>Actions</th>
+			</tr>
+			{{#each product in controller}}
+				<tr>
+					<td>{{product.id}}</td>
+					<td>{{product.name}}</td>
+					<td>{{product.description}}</td>
+					<td>
+						<ul class="nav nav-pills pull-left">
+				            <li class="">{{#link-to 'products.delete' product }}Delete{{/link-to}}</li>
+				            <li class="">{{#link-to 'products.edit' product }}Edit{{/link-to}}</li>
+				    	</ul>
+				    </td>
+				</tr>
+				{{else}}
+				<tr>
+				<td colspan="2">no Products found</td>
+				</tr>
+			{{/each}}
+		</table>
+	</div>
+	<div>
+	{{outlet}}
+	</div>
+</div>
